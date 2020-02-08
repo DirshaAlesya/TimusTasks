@@ -1,0 +1,7 @@
+mass1 = input().split(' ')
+mass2 = input().split(' ')
+mass3 = input().split(' ')
+first_math = int(mass1[0]) - int(mass3[0])
+second_math = int(mass1[1]) - int(mass2[1])
+result = str(first_math) + ' ' + str(second_math)
+print(result)
