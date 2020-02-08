@@ -1,0 +1,5 @@
+import math
+n, k = [int(i) for i in input().split()]
+res = math.ceil(n*2/k)
+print(2 if res == 1 else res)
+
