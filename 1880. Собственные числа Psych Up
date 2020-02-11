@@ -1,20 +1,11 @@
-n1 = int(input())
-s1 = input()
-n2 = int(input())
-s2 = input()
-n3 = int(input())
-s3 = input()
-m1 = set()
-m2 = set()
-m3 = set()
-for i in s1.split():
-    m1.add(int(i))
-for i in s2.split():
-    m2.add(int(i))
-for i in s3.split():
-    m3.add(int(i))
-result = []
-for i in m1:
-    if i in m2 and i in m3:
-        result.append(i)
-print(len(result))
+first_num = int(input())
+first_arr = [int(i) for i in input().split()]
+
+second_num = int(input())
+second_arr = [int(i) for i in input().split()]
+
+therd_num = int(input())
+thead_arr = [int(i) for i in input().split()]
+
+sobs_team = set(first_arr) & set(second_arr) & set(thead_arr)
+print(len(sobs_team))
