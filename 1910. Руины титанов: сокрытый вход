@@ -1,0 +1,10 @@
+num = int(input())
+lst = [int(i) for i in input().split()]
+max_sum = 0
+ind = 0
+
+for i in range(len(lst)-2):
+    if (lst[i] + lst[i+1] + lst[i+2]) > max_sum:
+        max_sum = lst[i] + lst[i+1] + lst[i+2]
+        ind = i + 2
+print(max_sum, ind)
