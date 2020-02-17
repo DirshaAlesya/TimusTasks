@@ -1,0 +1,38 @@
+n = int(input())
+names = []
+result = 0
+position = 'left'
+for i in range(n):
+    names.append(input())
+left = ['Alice', 'Ariel', 'Aurora', 'Phil', 'Peter', 'Olaf', 'Phoebus', 'Ralph', 'Robin']
+center = ['Bambi', 'Belle', 'Bolt', 'Mulan', 'Mowgli', 'Mickey', 'Silver', 'Simba', 'Stitch']
+right = ['Dumbo', 'Genie', 'Jiminy', 'Kuzko', 'Kida', 'Kenai', 'Tarzan', 'Tiana', 'Winnie']
+for i in names:
+    if str(i) in left and position == 'left':
+        result += 0
+        position = 'left'
+    if str(i) in left and position == 'right':
+        result += 2
+        position = 'left'
+    if str(i) in left and position == 'center':
+        result += 1
+        position = 'left'
+    if str(i) in right and position == 'left':
+        result += 2
+        position = 'right'
+    if str(i) in right and position == 'center':
+        result += 1
+        position = 'right'
+    if str(i) in right and position == 'right':
+        result += 0
+        position = 'right'
+    if str(i) in center and position == 'left':
+        result += 1
+        position = 'center'
+    if str(i) in center and position == 'center':
+        result += 0
+        position = 'center'
+    if str(i) in center and position == 'right':
+        result += 1
+        position = 'center'
+print(result)
