@@ -1,0 +1,18 @@
+count = input()
+nums = [int(num) for num in input().split(' ')]
+
+new_nums = []
+
+i = 0
+kol = 1
+while i < len(nums)-1:
+    if nums[i] == nums[i+1]:
+        kol += 1
+    else:
+        new_nums.append(kol)
+        new_nums.append(nums[i])
+        kol = 1
+    i += 1
+new_nums.append(kol)
+new_nums.append(nums[i])
+print(' '.join(map(str, new_nums)))
