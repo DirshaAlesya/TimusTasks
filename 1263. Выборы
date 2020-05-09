@@ -1,0 +1,12 @@
+import collections
+amount = input()
+list = amount.split(" ")
+candidates = int(list[0])
+people = int(list[1])
+votes = []
+for i in range(people):
+    votes.append(input())
+c = collections.Counter(votes)
+for candidate in range(1, candidates+1):
+    value = c.get(str(candidate), 0)
+    print('{:.2f}'.format(round(value / people * 100, 2)) + '%')
