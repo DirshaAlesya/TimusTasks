@@ -1,0 +1,7 @@
+row = [int(i) for i in input().split()]
+
+left = row[0]
+right = row[1]
+t1 = 39*2 + 40 + (left - 40)*2 + 1
+t2 = right * 2 + 40
+print(max(t1, t2))
